@@ -212,9 +212,7 @@ public class JokesUserResource {
 
     /**
      * {@code GET  /chuck-api: get Joke.
-     *
-     * @param id the id of the jokesUser to retrieve.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the joke, or with status {@code 404 (Not Found)}.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the jokesUser, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/jokes-users/chuck-api/")
     public ResponseEntity<JokesUser> getJokesUserByApi() {
@@ -223,7 +221,6 @@ public class JokesUserResource {
 
     /**
      * {@code GET  /jokes-users} : get all the jokesUsers.
-     *
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of jokesUsers in body.
      */
     @GetMapping("/jokes-users/id-user")
