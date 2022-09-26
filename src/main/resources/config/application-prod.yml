@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://ec2-44-210-36-247.compute-1.amazonaws.com:5432/d6nr0nkflgg6vm
-    username: oxqpxlyctyvbdd
-    password: e76c9996eea1e74ec0fd5a0a4a268fdc8f20a450fdd985740938428ab8c57264
+    url: jdbc:postgresql://ec2-54-144-12-35.compute-1.amazonaws.com:5432/dbnacr85fr3q2r
+    username: lacfbdoeyobaso
+    password: 4d29bf75961fac80776bacaacfe44e4fb4478044827773ccc21c03d7ef8d85b2
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -46,6 +46,7 @@ spring:
 
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
+    contexts: prod
   mail:
     host: smtp.gmail.com
     port: 587
