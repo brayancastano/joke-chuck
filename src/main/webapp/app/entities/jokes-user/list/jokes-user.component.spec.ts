@@ -40,9 +40,7 @@ describe('JokesUser Management Component', () => {
       .overrideTemplate(JokesUserComponent, '')
       .compileComponents();
 
-    fixture = TestBed.createComponent(JokesUserComponent);
-    comp = fixture.componentInstance;
-    service = TestBed.inject(JokesUserService);
+
 
     const headers = new HttpHeaders();
     jest.spyOn(service, 'query').mockReturnValue(
