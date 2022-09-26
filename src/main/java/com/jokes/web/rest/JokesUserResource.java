@@ -211,7 +211,7 @@ public class JokesUserResource {
     }
 
     /**
-     * {@code GET  /chuck-api: get jokesUser.
+     * {@code GET  /chuck-api }: get jokesUser.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the jokesUser, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/jokes-users/chuck-api/")
