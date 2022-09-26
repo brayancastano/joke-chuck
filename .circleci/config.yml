@@ -1,11 +1,14 @@
 version: 2.1
+orbs:
+  heroku: circleci/heroku@1.2.6
 jobs:
   build:
-    machine:
-      image: ubuntu-2004:current
-    resource_class: large
+    docker:
+      - image: jhipster/jhipster:v7.7.0
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 19.03.13
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -35,8 +38,5 @@ jobs:
           name: Give Executable Power
           command: 'chmod +x mvnw'
       - run:
-          name: Backend tests
-          command: npm run ci:backend:test
-      - run:
           name: Deploy to Heroku
-          command: './mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.buildpacks=heroku/jvm -Dheroku.appName='
+          command: './mvnw -ntp com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod,swagger -Dheroku.buildpacks=heroku/jvm -Dheroku.appName=app-chuck'
