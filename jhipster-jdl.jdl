@@ -1,0 +1,10 @@
+entity JokesUser {
+  idJoke String required,
+  url String required,
+  iconUrl String required,
+  value String required
+}
+
+relationship ManyToOne {
+  JokesUser{internalUser} to User
+}

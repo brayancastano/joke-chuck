@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="jokesUser">
+      <h2 data-cy="jokesUserDetailsHeading"><span>Jokes User</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ jokesUser.id }}</span>
+        </dd>
+        <dt><span>Id Joke</span></dt>
+        <dd>
+          <span>{{ jokesUser.idJoke }}</span>
+        </dd>
+        <dt><span>Url</span></dt>
+        <dd>
+          <span>{{ jokesUser.url }}</span>
+        </dd>
+        <dt><span>Icon Url</span></dt>
+        <dd>
+          <span>{{ jokesUser.iconUrl }}</span>
+        </dd>
+        <dt><span>Value</span></dt>
+        <dd>
+          <span>{{ jokesUser.value }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Volver</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20220925223050",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jokes_user",
+  "fields": [
+    {
+      "fieldName": "idJoke",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "iconUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "JokesUser",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "relationshipName": "internalUser",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
