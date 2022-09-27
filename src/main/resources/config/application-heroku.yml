@@ -24,6 +24,11 @@ spring:
     password: e76c9996eea1e74ec0fd5a0a4a268fdc8f20a450fdd985740938428ab8c57264
     hikari:
       maximumPoolSize: 8
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jugonbraik@gmail.com
+    password: brayan1997123asv
 server:
   port: ${PORT:8080}
 
