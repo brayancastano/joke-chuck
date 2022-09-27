@@ -26,3 +26,12 @@ spring:
       maximumPoolSize: 8
 server:
   port: ${PORT:8080}
+
+jhipster:
+  http:
+    cache: # Used by the CachingHttpHeadersFilter
+      timeToLiveInDays: 1461
+  security:
+    remember-me:
+      # security key (this key should be unique for your application, and kept secret)
+      key: 20c34b41f82734b2044c5cd9509417b43cacc7fd3d749aaab4bbe2339f176b39915205824d0d08855f051e6233b4f18ddd2b
