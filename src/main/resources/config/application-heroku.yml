@@ -24,19 +24,5 @@ spring:
     password: e76c9996eea1e74ec0fd5a0a4a268fdc8f20a450fdd985740938428ab8c57264
     hikari:
       maximumPoolSize: 8
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: jugonbraik@gmail.com
-    password: brayan1997123asv
 server:
   port: ${PORT:8080}
-
-jhipster:
-  http:
-    cache: # Used by the CachingHttpHeadersFilter
-      timeToLiveInDays: 1461
-  security:
-    remember-me:
-      # security key (this key should be unique for your application, and kept secret)
-      key: 20c34b41f82734b2044c5cd9509417b43cacc7fd3d749aaab4bbe2339f176b39915205824d0d08855f051e6233b4f18ddd2b
